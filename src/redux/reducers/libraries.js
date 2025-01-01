@@ -6,7 +6,7 @@ function changeLibrary(state = initialState, action) {
             return [...state, action.payload];
         default:
             return state;
-    };
-};
+    }
+}
 
 export default changeLibrary;

@@ -1,8 +1,6 @@
-export function logging(store) {
-    return function(next) {
-        return function (action) {
-             
-        }
+export const logging = store => next => action => {
+    if (!action.type.startWith('@@') && !action.type.startWith('HMR')) {
+        console.log('Action: ', action);
     }
-    console.log()
+    return next(action);
 }

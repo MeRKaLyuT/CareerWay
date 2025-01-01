@@ -3,7 +3,10 @@ module.exports = {
         "browser": true,
         "es2021": true
     },
-    "extends": "eslint:recommended",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
     "overrides": [
         {
             "env": {
@@ -17,12 +20,27 @@ module.exports = {
             }
         }
     ],
+    "parser": "@babel/eslint-parser",
     "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+        "ecmaVersion": 12,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
     },
+    "plugins": [
+        "react",
+        "react-hooks",
+    ],
     "rules": {
         "semi": ["error", "always"],
-        "quotes": ["warn", "single"]
+        "quotes": ["warn", "single"],
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }

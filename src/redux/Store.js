@@ -1,10 +1,12 @@
-import React from "react";
-import { createStore, applyMiddleware } from 'redux';
-import { useSelector, useDispatch, Provider, connect} from 'react-redux';
-import rootReducer from './reduces/combine';
-import { logging } from "./middlewares/logging";
+import { createStore, applyMiddleware, compose } from 'redux';
+import rootReducer from './reducers/combine';
+import { logging } from './middlewares/logging';
 
 
-const Store = createStore(rootReducer, applyMiddleware(logging));
-
+const Store = createStore(rootReducer, 
+    compose(
+        applyMiddleware(logging),
+        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    )
+);
 export default Store;

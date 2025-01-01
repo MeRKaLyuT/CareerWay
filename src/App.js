@@ -1,24 +1,25 @@
 import React from 'react';
+import Home from'./pages/home';
+import Profile from './pages/profile';
+import Roadmap from './pages/roadmap';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MainLayout from './components/layout/essential';
 
 
-function App() {
 
+const App = () => {
     return (
-    
-        <div>
-        <header>
-        
-        </header>
-        <main>
-            
-        </main>
-        <footer>
-
-        </footer>
-    </div>
-    
+            <Router>
+                <MainLayout>
+                    <Routes>
+                        <Route path = '/' element={<Home />} />
+                        <Route path='/roadmap' element={<Roadmap />}/>
+                        <Route path='/profile' element={<Profile />} />
+                    </Routes>
+                </MainLayout>
+            </Router>
     );
-};
+}
 
   
 export default App;
