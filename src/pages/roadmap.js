@@ -7,6 +7,6 @@ const Roadmap = ()  => {
         <p>Начни свой путь прямо сейчас.</p>
       </div>
     );
-}
+};
 
 export default Roadmap;

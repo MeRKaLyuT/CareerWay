@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainLayout from './components/layout/essential';
 
 
-
 const App = () => {
     return (
             <Router>
@@ -19,7 +18,7 @@ const App = () => {
                 </MainLayout>
             </Router>
     );
-}
+};
 
   
 export default App;

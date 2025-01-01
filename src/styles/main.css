@@ -1,10 +1,23 @@
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    height: 100%;
+    background-color: #f4f6f8;
+    overflow-x: hidden;
+    overscroll-behavior: none; /* Отключает "оттягивание" */
 }
 
 .appBar {
     text-decoration: none;
     user-select: none;
+    color: black;
 }
+
+footer {
+    margin-top: auto; /* Это заставляет футер прилипать к низу */
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    flex-grow: 1;
+  }

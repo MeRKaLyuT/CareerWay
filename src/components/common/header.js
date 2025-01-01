@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+// import { createTheme, ThemeProvider} from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from '@mui/material/Drawer';
@@ -19,26 +19,26 @@ import AppsIcon from '@mui/icons-material/Apps';
 // other
 import React from 'react';
 import { useState } from 'react';
-import '../../styles/main.css';
 import { Link } from 'react-router-dom';
+import '../../styles/main.css';
 
 
-const Theme = createTheme({
-  palette: {
-    primary: {
-      main: '#6a1b9a',
-        contrastText: '#ffffff',
-    },
-    secondary: {
-      main: '#e91e63',
-    }
-  },
-  typography: {
-    button: {
-      fontSize: '1em',
-    },
-  }
-});
+// const Theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: '#6a1b9a',
+//         contrastText: '#ffffff',
+//     },
+//     secondary: {
+//       main: '#e91e63',
+//     }
+//   },
+//   typography: {
+//     button: {
+//       fontSize: '1em',
+//     },
+//   }
+// });
 
 
 function Header() {

@@ -7,6 +7,6 @@ const Profile = ()  => {
         <p>Начни свой путь прямо сейчас.</p>
       </div>
     );
-}
+};
 
 export default Profile;
