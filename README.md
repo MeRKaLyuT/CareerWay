@@ -7,6 +7,11 @@ npm i webpack webpack-cli json-server eslint husky webpack-dev-server
 6. Для работы линтера и pre-commit хука следуют воспроизвести команду npx husky add .husky/pre-commit "npm run lint", затем git add ./husky и можете наслаждаться результатом!
 P.S Команда git add .husky необязательна. Она требуется, если вы хотите просто проверить работоспособность проекта, а не для его улучшения или использования
    
+
+
 Папка components хранит компоненты сайта (хедер, футер, макет)
 Essential.js - макет
 
+pages хранит страницы, оборачиваемые в макет сайта (essential.js)
+
+Сайт старается поддерживать адаптивный интерфейс

@@ -1,14 +1,14 @@
 // mui
-import { Box, Typography, Link, IconButton } from "@mui/material";
-import { Telegram } from "@mui/icons-material";
+import { Box, Typography, IconButton } from '@mui/material';
+import { Telegram } from '@mui/icons-material';
 //other
-import React from "react";
+import React from 'react';
 import '../../styles/main.css';
 
 
 function Footer() {
     return (
-        <Box component="footer" sx={
+        <Box component='footer' sx={
             {
                 display: 'flex',
                 flexDirection: 'column',
@@ -19,10 +19,10 @@ function Footer() {
                 backgroundColor: 'black',
             }
         }>
-            <Typography variant="h6" sx={{mb: 1}} >
+            <Typography variant='h6' sx={{mb: 1}} >
                 CareerWay
             </Typography>
-            <Typography variant="body2" sx={{mb: 2}}>
+            <Typography variant='body2' sx={{mb: 2}}>
                 © {new Date().getFullYear()} Все права защищены.
             </Typography>
             <Box sx={{display: 'flex', gap: 1}}>

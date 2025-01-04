@@ -1,7 +1,7 @@
 // mui
-import { Box, Typography, Button, Container } from "@mui/material";
+import { Box, Typography, Button, Container } from '@mui/material';
 //other
-import React from "react";
+import React from 'react';
 
 
 const Home = ()  => {
@@ -31,6 +31,7 @@ const Home = ()  => {
                 backgroundColor: '#1976d2',
                 '&:hover': { backgroundColor: '#1565c0' },
               }}
+              href='/login'
             >
               Начать свой путь
             </Button>
