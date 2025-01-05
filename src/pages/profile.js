@@ -44,7 +44,7 @@ const Profile = () => {
               setUser(response.data); 
           } catch (err) {
             setError('Failed to fetch user data'); 
-          };
+          }
       };
 
       fetchUser();
@@ -106,9 +106,13 @@ const Profile = () => {
           marginTop: '1em'
         }}>
         <Typography variant='h4' color='default' gutterBottom>
-        <h1>Добро пожаловать, {user.username}!</h1>
-        <p>Email: {user.email}</p>
-        <Button onClick={handleLogout} sx={{marginTop: '35em'}}>Выйти из аккаунта</Button>
+          Добро пожаловать, {user.username}!
+        </Typography>
+        <Typography variant='h5' color='default' gutterBottom>
+          Email: {user.email}
+        </Typography>
+        <Typography>
+          <Button onClick={handleLogout}>Выйти из аккаунта</Button>
         </Typography>
         </Box>
       </Box>

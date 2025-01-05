@@ -2,8 +2,7 @@ import React from 'react';
 import Home from'./pages/home';
 import Profile from './pages/profile';
 import Roadmap from './pages/roadmap';
-import Login from './pages/login';
-import Test from './pages/test';
+import AuthPage from './pages/authpage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainLayout from './components/layout/essential';
 
@@ -16,7 +15,7 @@ const App = () => {
                         <Route path = '/' element={<Home />} />
                         <Route path='/roadmap' element={<Roadmap />}/>
                         <Route path='/profile' element={<Profile />} />
-                        <Route path='/login' element={<Login />} />
+                        <Route path='/login' element={<AuthPage />} />
                     </Routes>
                 </MainLayout>
             </Router>
