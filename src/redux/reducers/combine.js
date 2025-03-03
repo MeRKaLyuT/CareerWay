@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import changeFramework from './frameworks';
-import changeLibrary from './libraries';
+import roadmapSlice from './ReadyRoadmapReducer';
+import simpleReducer from './testRed';
+
+
 
 export default combineReducers({
-    changeFramework,
-    changeLibrary
+    roadmapSlice,
+    simpleReducer
 });

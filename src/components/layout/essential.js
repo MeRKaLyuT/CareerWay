@@ -10,7 +10,7 @@ const MainLayout = ({children}) => {
             <main className='content'>
                 {children}
             </main>
-            <Footer />
+           <Footer />
         </div>
     );
 };

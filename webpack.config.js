@@ -11,7 +11,8 @@ module.exports = {
         historyApiFallback: true,
     },
     output: {
-        filename: 'main.js'
+        filename: 'main.js',
+        publicPath: '/',
     },
     module: {
         rules: [

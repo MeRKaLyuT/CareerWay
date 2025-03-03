@@ -1,0 +1,517 @@
+{
+  "roadmaps": [
+    {
+      "id": "basics",
+      "title": "Основы",
+      "description": "Изучите базовые концепции работы интернета, HTTP и ОС.",
+      "items": [
+        {
+          "id": "1",
+          "title": "Как работает интернет?",
+          "done": false,
+          "details": "Основы передачи данных в сети. Подробнее: https://developer.mozilla.org/ru/docs/Learn/Common_questions/How_does_the_Internet_work"
+        },
+        {
+          "id": "2",
+          "title": "Что такое HTTP?",
+          "done": false,
+          "details": "Протокол передачи данных для веб. Подробнее: https://developer.mozilla.org/ru/docs/Web/HTTP/Overview"
+        },
+        {
+          "id": "3",
+          "title": "Браузеры и как они работают?",
+          "done": false,
+          "details": "Механика работы веб-браузеров. Подробнее: https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/"
+        },
+        {
+          "id": "4",
+          "title": "DNS и как он работает?",
+          "done": false,
+          "details": "Система доменных имен. Подробнее: https://www.cloudflare.com/learning/dns/what-is-dns/"
+        },
+        {
+          "id": "5",
+          "title": "Что такое домен?",
+          "done": false,
+          "details": "Имена, привязанные к IP-адресам. Подробнее: https://www.namecheap.com/blog/what-is-a-domain-name/"
+        },
+        {
+          "id": "6",
+          "title": "Что такое хостинг?",
+          "done": false,
+          "details": "Услуги по размещению веб-сайтов. Подробнее: https://www.hostinger.ru/rukovodstva/chto-takoe-hosting"
+        }
+      ]
+    },
+    {
+      "id": "programming_languages",
+      "title": "Языки программирования",
+      "description": "Изучите популярные языки программирования для бэкенда.",
+      "items": [
+        {
+          "id": "1",
+          "title": "Python",
+          "done": false,
+          "details": "Универсальный язык, популярный для веб-разработки и анализа данных. Подробнее: https://docs.python.org/3/tutorial/index.html"
+        },
+        {
+          "id": "2",
+          "title": "JavaScript",
+          "done": false,
+          "details": "Основной язык для работы с фронтендом и серверной логикой (Node.js). Подробнее: https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide"
+        },
+        {
+          "id": "3",
+          "title": "Java",
+          "done": false,
+          "details": "Язык для корпоративных приложений. Подробнее: https://docs.oracle.com/en/java/"
+        },
+        {
+          "id": "4",
+          "title": "C#",
+          "done": false,
+          "details": "Используется для разработки приложений под платформу .NET. Подробнее: https://learn.microsoft.com/ru-ru/dotnet/csharp/"
+        },
+        {
+          "id": "5",
+          "title": "PHP",
+          "done": false,
+          "details": "Популярный язык для веб-разработки, особенно для серверной части. Подробнее: https://www.php.net/manual/ru/"
+        },
+        {
+          "id": "6",
+          "title": "Go",
+          "done": false,
+          "details": "Современный язык для высокопроизводительных систем. Подробнее: https://go.dev/doc/"
+        },
+        {
+          "id": "7",
+          "title": "Rust",
+          "done": false,
+          "details": "Язык для системного программирования с акцентом на безопасность памяти. Подробнее: https://doc.rust-lang.org/book/"
+        }
+      ]
+    },
+    {
+      "id": "version_control",
+      "title": "Системы контроля версий",
+      "description": "Изучите инструменты для управления версиями кода.",
+      "items": [
+        {
+          "id": "1",
+          "title": "Git",
+          "done": false,
+          "details": "Распределённая система управления версиями. Подробнее: https://git-scm.com/book/ru/v2"
+        },
+        {
+          "id": "2",
+          "title": "GitHub",
+          "done": false,
+          "details": "Платформа для хостинга и управления репозиториями. Подробнее: https://docs.github.com/ru/get-started"
+        },
+        {
+          "id": "3",
+          "title": "GitLab",
+          "done": false,
+          "details": "Платформа для CI/CD и управления репозиториями. Подробнее: https://docs.gitlab.com/"
+        },
+        {
+          "id": "4",
+          "title": "Bitbucket",
+          "done": false,
+          "details": "Инструмент для командной работы с кодом. Подробнее: https://bitbucket.org/product/guides"
+        }
+      ]
+    },
+    {
+      "id": "os_general_knowledge",
+      "title": "ОС и общие знания",
+      "description": "Изучите основы операционных систем и их работы.",
+      "items": [
+        {
+          "id": "1",
+          "title": "Как работают ОС?",
+          "done": false,
+          "details": "Основы работы операционных систем. Подробнее: https://www.geeksforgeeks.org/introduction-of-operating-system-set-1/"
+        },
+        {
+          "id": "2",
+          "title": "Управление процессами",
+          "done": false,
+          "details": "Как операционные системы управляют процессами. Подробнее: https://www.tutorialspoint.com/operating_system/os_process_management.htm"
+        },
+        {
+          "id": "3",
+          "title": "Потоки и параллелизм",
+          "done": false,
+          "details": "Работа потоков и параллельных процессов. Подробнее: https://www.geeksforgeeks.org/difference-between-process-and-thread/"
+        },
+        {
+          "id": "4",
+          "title": "Управление памятью",
+          "done": false,
+          "details": "Как ОС распределяют память между процессами. Подробнее: https://www.tutorialspoint.com/operating_system/os_memory_management.htm"
+        },
+        {
+          "id": "5",
+          "title": "Основы POSIX",
+          "done": false,
+          "details": "Стандарты взаимодействия с операционной системой. Подробнее: https://pubs.opengroup.org/onlinepubs/9699919799/"
+        }
+      ]
+    },
+    {
+      "id": "databases",
+      "title": "Базы данных",
+      "description": "Изучите основы реляционных и NoSQL баз данных.",
+      "items": [
+        {
+          "id": "1",
+          "title": "PostgreSQL",
+          "done": false,
+          "details": "Реляционная база данных. Подробнее: https://www.postgresql.org/docs/"
+        },
+        {
+          "id": "2",
+          "title": "MySQL",
+          "done": false,
+          "details": "Популярная реляционная база данных. Подробнее: https://dev.mysql.com/doc/"
+        },
+        {
+          "id": "3",
+          "title": "MongoDB",
+          "done": false,
+          "details": "Документно-ориентированная база данных. Подробнее: https://www.mongodb.com/docs/manual/"
+        },
+        {
+          "id": "4",
+          "title": "Redis",
+          "done": false,
+          "details": "Ключ-значение база данных, используется для кэширования. Подробнее: https://redis.io/docs/"
+        },
+        {
+          "id": "5",
+          "title": "ACID-свойства",
+          "done": false,
+          "details": "Основы надежности баз данных. Подробнее: https://www.ibm.com/docs/en/db2/11.5?topic=processing-acid-transactions"
+        }
+      ]
+    },
+    {
+      "id": "more_about_databases",
+      "title": "Больше о базах данных",
+      "description": "Изучите углубленные аспекты работы с базами данных.",
+      "items": [
+        {
+          "id": "1",
+          "title": "ACID-свойства",
+          "done": false,
+          "details": "Основы надежности баз данных. Подробнее: https://www.ibm.com/docs/en/db2/11.5?topic=processing-acid-transactions"
+        },
+        {
+          "id": "2",
+          "title": "Транзакции",
+          "done": false,
+          "details": "Атомарные операции в базах данных. Подробнее: https://www.geeksforgeeks.org/acid-properties-in-dbms/"
+        },
+        {
+          "id": "3",
+          "title": "Проблема N+1",
+          "done": false,
+          "details": "Оптимизация запросов в базах данных. Подробнее: https://vladmihalcea.com/n-plus-1-query-problem/"
+        },
+        {
+          "id": "4",
+          "title": "Шардирование",
+          "done": false,
+          "details": "Стратегии разделения данных между серверами. Подробнее: https://www.mongodb.com/basics/sharding"
+        },
+        {
+          "id": "5",
+          "title": "Репликация данных",
+          "done": false,
+          "details": "Создание копий данных для повышения доступности. Подробнее: https://aws.amazon.com/what-is/data-replication/"
+        },
+        {
+          "id": "6",
+          "title": "Нормализация",
+          "done": false,
+          "details": "Организация данных для устранения избыточности. Подробнее: https://www.guru99.com/database-normalization.html"
+        },
+        {
+          "id": "7",
+          "title": "Индексы баз данных",
+          "done": false,
+          "details": "Методы оптимизации запросов. Подробнее: https://www.postgresql.org/docs/current/indexes.html"
+        }
+      ]
+    },
+    {
+      "id": "authentication",
+      "title": "Аутентификация",
+      "description": "Изучите современные методы аутентификации и безопасности.",
+      "items": [
+        {
+          "id": "1",
+          "title": "JWT",
+          "done": false,
+          "details": "JSON Web Tokens для аутентификации. Подробнее: https://jwt.io/introduction/"
+        },
+        {
+          "id": "2",
+          "title": "OAuth",
+          "done": false,
+          "details": "Протокол авторизации. Подробнее: https://oauth.net/2/"
+        },
+        {
+          "id": "3",
+          "title": "SAML",
+          "done": false,
+          "details": "Безопасность обмена данными между системами. Подробнее: https://www.okta.com/identity-101/what-is-saml/"
+        },
+        {
+          "id": "4",
+          "title": "OpenID",
+          "done": false,
+          "details": "Протокол для единого входа. Подробнее: https://openid.net/developers/"
+        },
+        {
+          "id": "5",
+          "title": "Хэширование паролей (bcrypt, scrypt)",
+          "done": false,
+          "details": "Шифрование паролей для безопасности. Подробнее: https://auth0.com/blog/hashing-passwords-one-way-road-to-security/"
+        }
+      ]
+    },
+    {
+      "id": "caching",
+      "title": "Кэширование",
+      "description": "Изучите основы кэширования для повышения производительности приложений.",
+      "items": [
+        {
+          "id": "1",
+          "title": "Redis",
+          "done": false,
+          "details": "Высокоскоростная база данных для кэширования. Подробнее: https://redis.io/docs/"
+        },
+        {
+          "id": "2",
+          "title": "Memcached",
+          "done": false,
+          "details": "Система кэширования ключ-значение. Подробнее: https://memcached.org/"
+        },
+        {
+          "id": "3",
+          "title": "CDN",
+          "done": false,
+          "details": "Сети доставки контента для оптимизации скорости загрузки. Подробнее: https://www.cloudflare.com/learning/cdn/what-is-a-cdn/"
+        }
+      ]
+    },
+    {
+      "id": "architectural_patterns",
+      "title": "Архитектурные паттерны и современные технологии",
+      "description": "Изучите популярные архитектурные паттерны и технологии для современных приложений.",
+      "items": [
+        {
+          "id": "1",
+          "title": "Монолитные приложения",
+          "done": false,
+          "details": "Единое приложение без модульного разделения. Подробнее: https://martinfowler.com/bliki/MonolithFirst.html"
+        },
+        {
+          "id": "2",
+          "title": "Микросервисы",
+          "done": false,
+          "details": "Модульный подход к разработке приложений. Подробнее: https://microservices.io/"
+        },
+        {
+          "id": "3",
+          "title": "SOA (Сервис-ориентированная архитектура)",
+          "done": false,
+          "details": "Модель для построения сервисов. Подробнее: https://www.ibm.com/cloud/learn/soa"
+        },
+        {
+          "id": "4",
+          "title": "Брокеры сообщений",
+          "done": false,
+          "details": "Инструменты для передачи сообщений между сервисами (RabbitMQ, Kafka). Подробнее: https://www.cloudamqp.com/blog/what-is-message-broker.html"
+        },
+        {
+          "id": "5",
+          "title": "Containerization vs Virtualization",
+          "done": false,
+          "details": "Сравнение контейнеров и виртуальных машин. Подробнее: https://www.docker.com/resources/what-container/"
+        },
+        {
+          "id": "6",
+          "title": "GraphQL",
+          "done": false,
+          "details": "Альтернативный подход к REST для работы с API. Подробнее: https://graphql.org/"
+        },
+        {
+          "id": "7",
+          "title": "WebSockets",
+          "done": false,
+          "details": "Технология для двусторонней связи в реальном времени. Подробнее: https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"
+        },
+        {
+          "id": "8",
+          "title": "Server Sent Events (SSE)",
+          "done": false,
+          "details": "Технология для односторонней связи от сервера к клиенту. Подробнее: https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events"
+        }
+      ]
+    },
+    {
+      "id": "servers",
+      "title": "Веб-серверы",
+      "description": "Разберитесь в веб-серверах и их настройке.",
+      "items": [
+        {
+          "id": "1",
+          "title": "Nginx",
+          "done": false,
+          "details": "Высокопроизводительный веб-сервер. Подробнее: https://nginx.org/ru/"
+        },
+        {
+          "id": "2",
+          "title": "Apache",
+          "done": false,
+          "details": "Популярный веб-сервер для хостинга сайтов. Подробнее: https://httpd.apache.org/"
+        },
+        {
+          "id": "3",
+          "title": "Caddy",
+          "done": false,
+          "details": "Простой в настройке веб-сервер. Подробнее: https://caddyserver.com/docs/"
+        }
+      ]
+    },
+    {
+      "id": "patterns",
+      "title": "Архитектурные паттерны",
+      "description": "Изучите подходы к проектированию приложений.",
+      "items": [
+        {
+          "id": "1",
+          "title": "Монолитные приложения",
+          "done": false,
+          "details": "Цельные приложения без разделения на модули. Подробнее: https://martinfowler.com/bliki/MonolithFirst.html"
+        },
+        {
+          "id": "2",
+          "title": "Микросервисы",
+          "done": false,
+          "details": "Модульный подход к разработке приложений. Подробнее: https://microservices.io/"
+        },
+        {
+          "id": "3",
+          "title": "SOA",
+          "done": false,
+          "details": "Сервис-ориентированная архитектура."
+        }
+      ]
+    },
+    {
+      "id": "testing",
+      "title": "Тестирование",
+      "description": "Изучите различные типы тестирования для обеспечения качества приложений.",
+      "items": [
+        {
+          "id": "1",
+          "title": "Модульное тестирование",
+          "done": false,
+          "details": "Тестирование отдельных модулей кода. Подробнее: https://www.geeksforgeeks.org/unit-testing-in-software-testing/"
+        },
+        {
+          "id": "2",
+          "title": "Интеграционное тестирование",
+          "done": false,
+          "details": "Проверка взаимодействия различных модулей. Подробнее: https://www.guru99.com/integration-testing.html"
+        },
+        {
+          "id": "3",
+          "title": "Функциональное тестирование",
+          "done": false,
+          "details": "Проверка соответствия приложения функциональным требованиям. Подробнее: https://www.softwaretestinghelp.com/functional-testing/"
+        }
+      ]
+    },
+    {
+      "id": "containerization",
+      "title": "Контейнеризация и виртуализация",
+      "description": "Освойте инструменты для создания и управления контейнерами.",
+      "items": [
+        {
+          "id": "1",
+          "title": "Docker",
+          "done": false,
+          "details": "Контейнеризация для упрощения деплоя приложений. Подробнее: https://docs.docker.com/get-started/"
+        },
+        {
+          "id": "2",
+          "title": "Kubernetes",
+          "done": false,
+          "details": "Оркестрация контейнеров для управления кластером. Подробнее: https://kubernetes.io/docs/home/"
+        },
+        {
+          "id": "3",
+          "title": "LXC",
+          "done": false,
+          "details": "Легковесные контейнеры для изоляции процессов. Подробнее: https://linuxcontainers.org/lxc/introduction/"
+        }
+      ]
+    },
+    {
+      "id": "scaling",
+      "title": "Масштабирование",
+      "description": "Изучите подходы к масштабированию приложений.",
+      "items": [
+        {
+          "id": "1",
+          "title": "Горизонтальное масштабирование",
+          "done": false,
+          "details": "Добавление новых серверов для увеличения мощности. Подробнее: https://www.cloudflare.com/learning/performance/what-is-scalability/"
+        },
+        {
+          "id": "2",
+          "title": "Вертикальное масштабирование",
+          "done": false,
+          "details": "Увеличение мощности существующих серверов. Подробнее: https://aws.amazon.com/blogs/architecture/scaling-your-architecture/"
+        },
+        {
+          "id": "3",
+          "title": "Митигирование проблем производительности",
+          "done": false,
+          "details": "Стратегии для управления нагрузкой. Подробнее: https://www.cloudflare.com/learning/performance/performance-optimization/"
+        }
+      ]
+    },
+    {
+      "id": "ci_cd",
+      "title": "CI/CD",
+      "description": "Настройте процессы непрерывной интеграции и доставки.",
+      "items": [
+        {
+          "id": "1",
+          "title": "Jenkins",
+          "done": false,
+          "details": "Автоматизация сборки и тестирования. Подробнее: https://www.jenkins.io/doc/"
+        },
+        {
+          "id": "2",
+          "title": "GitLab CI",
+          "done": false,
+          "details": "Интеграция CI/CD в GitLab. Подробнее: https://docs.gitlab.com/ee/ci/"
+        },
+        {
+          "id": "3",
+          "title": "GitHub Actions",
+          "done": false,
+          "details": "Инструменты CI/CD от GitHub. Подробнее: https://docs.github.com/en/actions"
+        }
+      ]
+    }
+  ]
+}

@@ -21,6 +21,7 @@ function AuthPage() {
         titleR: 'Регистрация',
         usernameLabel: 'Имя пользователя',
         passwordLabel: 'Пароль',
+        email: 'Email',
         loginButton: 'Вход',
         error: 'Неверное имя пользователя или пароль',
     };
@@ -42,7 +43,6 @@ function AuthPage() {
             localStorage.setItem('access', response.data.access);
             localStorage.setItem('refresh', response.data.refresh);
             setError('');
-            alert('Вход успешно совершен');
             navigate('/');
             
         } catch (err) {
@@ -64,7 +64,6 @@ function AuthPage() {
         const csrfToken = getCookie('csrftoken');
         await axios.get('http://127.0.0.1:8000/api/register/', { withCredentials: true });
         try {
-            console.log(csrfToken)
         const response = await axios.post(
             'http://127.0.0.1:8000/api/register/',
             {
@@ -86,13 +85,12 @@ function AuthPage() {
                 setError('');
             } else {
                 alert('Ошибка регистрации. Попробуйте позже');
-            };
-            
+            }
         } catch (err) {
             if (err.response) {
                 console.log('server response data:', err.response.data);
                 setError(JSON.stringify(err.response.data) || 'ошибка');
-            };
+            }
         }
     };
 
@@ -145,9 +143,9 @@ function AuthPage() {
                 height: '100vh',
               }}>
                 <Typography sx={{marginBottom: '1em'}} variant='h4' gutterBottom>{text.titleR}</Typography>
-                <TextField label="Имя пользователя" value={username} required sx={{ marginBottom: 2, width: '100%', maxWidth: '300px' }} onChange={(e) => setUsername(e.target.value)}/>
-                <TextField label="Email" value={email} required sx={{ marginBottom: 2, width: '100%', maxWidth: '300px' }} onChange={(e) => setEmail(e.target.value)}/>
-                <TextField label="Пароль" value={password} required sx={{ marginBottom: 2, width: '100%', maxWidth: '300px' }} onChange={(e) => setPassword(e.target.value)}/>
+                <TextField label={text.usernameLabel} value={username} required sx={{ marginBottom: 2, width: '100%', maxWidth: '300px' }} onChange={(e) => setUsername(e.target.value)}/>
+                <TextField label={text.email} value={email} required sx={{ marginBottom: 2, width: '100%', maxWidth: '300px' }} onChange={(e) => setEmail(e.target.value)}/>
+                <TextField label={text.passwordLabel} value={password} required sx={{ marginBottom: 2, width: '100%', maxWidth: '300px' }} onChange={(e) => setPassword(e.target.value)}/>
                 <Button variant="contained" color="primary" type="submit" sx={{ width: '300px', padding: '10px 0'}} onClick={handleRegister}>
                     Зарегистрироваться
                 </Button>
@@ -162,9 +160,7 @@ function AuthPage() {
                 </Box>
             
         );
-    };
-    
-    
+    }
 }
 
 export default AuthPage;

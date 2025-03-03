@@ -26,7 +26,7 @@ function Footer() {
                 © {new Date().getFullYear()} Все права защищены.
             </Typography>
             <Box sx={{display: 'flex', gap: 1}}>
-                <IconButton color="inherit" component='a' href="https://telegram.org"><Telegram /></IconButton>
+                <IconButton color="inherit" component='a' href="https://web.telegram.org/k/#@merkalyut" target='_blank'><Telegram /></IconButton>
             </Box>
         </Box>
     );

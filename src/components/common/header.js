@@ -19,8 +19,9 @@ import AppsIcon from '@mui/icons-material/Apps';
 // other
 import React from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../../styles/main.css';
+import { setAuth } from '../../services/setAuth';
 
 
 // const Theme = createTheme({
@@ -44,19 +45,29 @@ import '../../styles/main.css';
 function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  // Используем адаптивность
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Для мобильных
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); 
+  const location = useLocation();
+  const isAuth = setAuth();
+
+  let title = 'CareerWay';
+  // if (location.pathname == '/roadmap/backender') {
+  //   title = 'CareerWay /Backend-Разработчик';
+  // } else {
+  //   title = 'CareerWay';
+  // };
 
   return (
     <>
       <AppBar position="static" color='default'>
         <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            CareerWay
+          <Typography variant="h6" sx={{ flexGrow: 1, display: 'flex' }}>
+          {title} <Typography>{(location.pathname == '/roadmap/backender') ? (' /Backend-Разработчик') : ('')}</Typography>
+            <Typography sx={{color: '#545454'}}>
+              
+            </Typography>
           </Typography>
-          {isMobile ? (
-            // Показываем меню только на мобильных устройствах
+          {isMobile ? ( //only mobile
             <IconButton
               edge="end"
               color="inherit"
@@ -66,8 +77,11 @@ function Header() {
               <MenuIcon />
             </IconButton>
           ) : (
-            // Показываем кнопки только на больших экранах
-            <Box sx={{ display: 'flex', gap: 2}}>
+            // только на больших экранах
+            <Box sx={{ display: 'flex', gap: 2, alignItems: "center"}}>
+              {isAuth ? (<></>) : (
+                <Typography><Link to="/login" className='signup'>Sign up</Link></Typography>
+              )}
               <Button color="inherit" startIcon={<HomeIcon />}><Link to='/' className='appBar'>Главная</Link></Button>
               <Button color="inherit" startIcon={<AppsIcon />}><Link to='/roadmap' className='appBar'>Роадмапы</Link></Button>
               <Button color="inherit" startIcon={<AccountCircleIcon />}><Link to='/profile' className='appBar'>Профиль</Link></Button>
@@ -76,8 +90,7 @@ function Header() {
         </Toolbar>
       </AppBar>
 
-      {/* Drawer для мобильных устройств */}
-      <Drawer anchor="left" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
+      <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
         <List>
           <ListItem button>
             <ListItemText><Link to='/' className='appBar'>Главная</Link></ListItemText>

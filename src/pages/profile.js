@@ -23,14 +23,14 @@ const Profile = () => {
         }
 
         try {
-          const payload = JSON.parse(atob(token.split('.')[1])); // Декодируем токен
-          const currentTime = Math.floor(Date.now() / 1000); // Текущее время
+          const payload = JSON.parse(atob(token.split('.')[1])); // декодирация токена
+          const currentTime = Math.floor(Date.now() / 1000); 
           if (payload.exp < currentTime) {
               throw new Error('Token expired');
           }
         } catch (err) {
           setError('Invalid or expired token. Please log in.');
-          localStorage.removeItem('access'); // Удаляем недействительный токен
+          localStorage.removeItem('access'); 
           localStorage.removeItem('refresh');
           return;
         }
@@ -57,7 +57,6 @@ const Profile = () => {
   };
 
   if (error) {
-    // Если есть ошибка, показываем её с красивым оформлением
     return (
         <Box sx={{
            display: 'flex',

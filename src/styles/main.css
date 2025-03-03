@@ -13,8 +13,19 @@ body {
     color: black;
 }
 
+.signup {
+    text-decoration: none;
+    color: white;
+    background-color: #2e3bb0;
+    padding: 10px 20px;
+    margin-right: 2rem;
+    border-radius: 20px;
+    &:hover{
+        background-color: #4954b3;
+    }
+}
+
 footer {
-    margin-top: auto; /* Это заставляет футер прилипать к низу */
     background-color: black;
     color: white;
     text-align: center;

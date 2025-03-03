@@ -1,12 +1,8 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { configureStore } from '@reduxjs/toolkit';
 import rootReducer from './reducers/combine';
-import { logging } from './middlewares/logging';
 
+const store = configureStore({
+  reducer: rootReducer,
+});
 
-const Store = createStore(rootReducer, 
-    compose(
-        applyMiddleware(logging),
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-    )
-);
-export default Store;
+export default store;
