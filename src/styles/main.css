@@ -15,14 +15,12 @@ body {
 
 .signup {
     text-decoration: none;
-    color: white;
-    background-color: #2e3bb0;
-    padding: 10px 20px;
-    margin-right: 2rem;
-    border-radius: 20px;
-    &:hover{
-        background-color: #4954b3;
-    }
+    color: rgb(40, 79, 151);
+    
+    padding: 5px 10px;
+    
+    
+
 }
 
 footer {
@@ -32,3 +30,7 @@ footer {
     padding: 20px 0;
     flex-grow: 1;
   }
+
+.profTesth1 {
+    background-image:url("/src/media/proftest/compback.webp");
+}

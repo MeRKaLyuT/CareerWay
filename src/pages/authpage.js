@@ -120,7 +120,7 @@ function AuthPage() {
                     onChange={(e) => setPassword(e.target.value)}
                     sx={{ marginBottom: 2, width: '100%', maxWidth: '300px' }}
                 />
-                <Button onClick={handleLogin} variant='contained' color='secondary' sx={{ width: '300px', padding: '10px 0'}}>{text.loginButton}</Button>
+                <Button onClick={handleLogin} variant='contained' sx={{ width: '300px', padding: '10px 0'}}>{text.loginButton}</Button>
                 {error && (
                 <Typography variant="body2" color="error" sx={{ marginTop: 2 }}>
                     {error}

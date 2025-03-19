@@ -80,7 +80,7 @@ function Header() {
             // только на больших экранах
             <Box sx={{ display: 'flex', gap: 2, alignItems: "center"}}>
               {isAuth ? (<></>) : (
-                <Typography><Link to="/login" className='signup'>Sign up</Link></Typography>
+                <Typography><Link to="/login" className='signup'>Авторизация</Link></Typography>
               )}
               <Button color="inherit" startIcon={<HomeIcon />}><Link to='/' className='appBar'>Главная</Link></Button>
               <Button color="inherit" startIcon={<AppsIcon />}><Link to='/roadmap' className='appBar'>Роадмапы</Link></Button>
