@@ -73,15 +73,14 @@ const ProfTest = () => {
                                 </Typography>
                             ))}
                         </Box>
-                        
+                        <Button sx={{mt: 3, background: "white", color: "black"}} variant="contained" href="/profile">Уйти</Button>
                     </Box>
                 ) : (<></>)}
-                
                 <Button sx={{mt: 3, background: "white", color: "black"}} variant="contained" 
-                onClick={() => {dispatch(resetTest())}}> Пройти тест заново</Button>
+                onClick={() => {dispatch(resetTest());}}> Пройти тест заново</Button>
                 </Box>
             </Box>
-        )
+        );
     }
 
     const question = questions[currentQuestion];

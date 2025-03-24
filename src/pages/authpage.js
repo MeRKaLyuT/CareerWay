@@ -31,7 +31,6 @@ function AuthPage() {
     };
     
     useAuth();
-
     
     const handleLogin = async () => {
         try {

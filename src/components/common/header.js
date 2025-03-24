@@ -59,13 +59,10 @@ function Header() {
 
   return (
     <>
-      <AppBar position="static" color='default'>
+      <AppBar position="static" color='default' className='head'>
         <Toolbar>
           <Typography variant="h6" sx={{ flexGrow: 1, display: 'flex' }}>
           {title} <Typography>{(location.pathname == '/roadmap/backender') ? (' /Backend-Разработчик') : ('')}</Typography>
-            <Typography sx={{color: '#545454'}}>
-              
-            </Typography>
           </Typography>
           {isMobile ? ( //only mobile
             <IconButton
@@ -101,6 +98,11 @@ function Header() {
           <ListItem button>
             <ListItemText><Link to='/profile' className='appBar'>Профиль</Link></ListItemText>
           </ListItem>
+          {isAuth ? (<></>) : (
+            <ListItem button>
+              <ListItemText><Link to="/login" className='signup'>Авторизация</Link></ListItemText>
+            </ListItem>
+          )}
         </List>
       </Drawer>
     </>

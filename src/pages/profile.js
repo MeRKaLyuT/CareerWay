@@ -1,18 +1,30 @@
 // mui
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Typography, Divider} from '@mui/material';
 import SentimentDissatisfiedIcon from '@mui/icons-material/SentimentDissatisfied';
 // other
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Account from '../components/profile/account';
+import Test from '../components/profile/test';
+import LeftBar from '../components/profile/leftBar';
+import { useNavigate } from 'react-router-dom';
 
 
 const Profile = () => {
   const [user, setUser] = useState(null); 
   const [error, setError] = useState(null); 
+  const navigate = useNavigate();
   const [testHistory, setTestHistory] = useState([]);
-  const navigate = useNavigate(); 
+  const [activeSection, setActiveSection] = useState(() => {
+    const saved = localStorage.getItem('activeSection');
+    return saved || 'account';
+  });
+
+
+  useEffect(() => {
+    localStorage.setItem('activeSection', activeSection);
+  }, [activeSection]);
 
   useEffect(() => {
       const fetchUser = async () => {
@@ -59,18 +71,15 @@ const Profile = () => {
           }
           );
           setTestHistory(response.data.test_results);
-        } catch (error) {}
+        } catch (error) {
+          console.error("error:", error);
+        }
       };
 
       fetchUser();
       fetchTestHistory();
   }, [navigate]);
 
-  const handleLogout = () => {
-    localStorage.removeItem('access');
-    localStorage.removeItem('refresh');
-    navigate('/login');
-  };
 
   if (error) {
     return (
@@ -107,43 +116,25 @@ const Profile = () => {
 }
 
   if (!user) {
-      return <div>Загрузка...</div>; 
+      return <Box sx={{height: "100vh"}}>Загрузка...</Box>; 
   }
 
-  return (
-      <Box sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        height: '100vh',
-      }}>
-        <Box sx={{
-          textAlign: 'center',
-          marginTop: '1em'
-        }}>
-        <Typography variant='h4' color='default' gutterBottom>
-          Добро пожаловать, {user.username}!
-        </Typography>
-        <Typography variant='h5' color='default' gutterBottom>
-          Email: {user.email}
-        </Typography>
-        <Typography>
-          <Button onClick={handleLogout}>Выйти из аккаунта</Button>
-        </Typography>
-        </Box>
 
-        <Box sx={{display: "flex", justifyContent: "center", py: 5}}>
-          <Typography>
-            Твой результат профориентационного теста: 
-            {Object.entries(testHistory).map(([key, value]) => (
-              <Typography sx={{justifyContent: "center", display: "flex"}}>
-                {key}: {value}
-              </Typography>
-            ))}
-          </Typography>
-          
+    return (
+      <Box sx={{
+        flexDirection: "row",
+        display: "flex",
+        width: "100%"
+      }}>
+        
+          <LeftBar setActiveSection={setActiveSection}/>
+        
+        <Box sx={{ flexGrow: 1, display: "flex", justifyContent: "center" }}>
+        {activeSection === 'account' && <Account username={user.username} email={user.email} />}
+        {activeSection === 'test' && <Test testHistory={testHistory} />}
         </Box>
       </Box>
-  );
+    );
 };
 
 export default Profile;
